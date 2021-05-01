@@ -14,23 +14,31 @@ ps
 `docker run -v ${pwd}:/app -p 3000:3000 -d --name node-app node-app-image`
 
 bash
+
 `docker run -v $(pwd):/app -p 3000:3000 -d --name node-app node-app-image`
 
-"dev": "nodemon index.js",
+"dev": "nodemon index.js", 
+
 or
 /*"dev": "nodemon -L index.js", if you get error on windows*/
 
-`docker ps -a ` all containers
+`docker ps -a ` 
 
-`docker ps` running containers
+all containers
+
+`docker ps` 
+
+running containers
 
 `docker logs node-app`
 
 how to avoid delete synced files from docker image when deleted local is deleted
+  - create a new volume
 
-create a new volume
 # binodes to sync stuff for dev
+
 -v indicates volume
+
 `docker run -v ${pwd}:/app -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image`
 
  binode allows 2 way sync, ie , docker and write files to local, giving docker readonly permissions below
@@ -49,16 +57,21 @@ create a new volume
 prints env variables
 
 ### passing env vars from a file
+
 ```
 docker run -v ${pwd}:/app -v /app/node_modules --env-file ./.env -p 3000:4000 -d --name node-app node-app-image
 ```
+
 #### list docker volumes
+
 `docker volume ls`
 
 #### removes all unused volumes
+
 `docker volume prune`
 
 ### removes voulme asscoiated with container
+
 `docker rm node-app -fv`
 
 `docker-compose up --build`
@@ -76,7 +89,7 @@ docker run -v ${pwd}:/app -v /app/node_modules --env-file ./.env -p 3000:4000 -d
 `docker image ls`
 
 docker compose looks for image with the name,
-so explictly pass build flag to build new image
+so explicitly pass build flag to build new image
 
 `docker-compose up -d --build`
 
