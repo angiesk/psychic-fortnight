@@ -58,7 +58,9 @@ docker run -v ${pwd}:/app -v /app/node_modules --env-file ./.env -p 3000:4000 -d
 `docker rm node-app -fv`
 
 `docker-compose up --build``docker-compose build`
+
 ` docker-compose up -d`
+
 `docker compose up`
 
 `docker-compose down`
@@ -69,10 +71,13 @@ docker run -v ${pwd}:/app -v /app/node_modules --env-file ./.env -p 3000:4000 -d
 
 docker compose looks for image with the name,
 so explictly pass build flag to build new image
+
 `docker-compose up -d --build`
 
 `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d`
+
 `docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v`
 
 `docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build`
+
 `docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v`
