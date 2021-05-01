@@ -48,3 +48,11 @@ prints env variables
 ```
 docker run -v ${pwd}:/app -v /app/node_modules --env-file ./.env -p 3000:4000 -d --name node-app node-app-image
 ```
+#### list docker volumes
+`docker volume ls`
+
+#### removes all unused volumes
+`docker volume prune`
+
+### removes voulme asscoiated with container
+`docker rm node-app -fv`
