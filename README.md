@@ -1,3 +1,5 @@
+## Notes on how to build to prod ready docker apps using express 
+
 `docker build -t node-app-image .`
 
 `docker run -p 3000:3000 -d --name node-app node-app-image`
@@ -41,7 +43,9 @@ create a new volume
 `docker run -v ${pwd}:/app -v /app/node_modules -e PORT=4000 -p 3000:4000 -d --name node-app node-app-image`
 
 `docker exec -it node-app bash`
+
 `printenv`
+
 prints env variables
 
 ### passing env vars from a file
