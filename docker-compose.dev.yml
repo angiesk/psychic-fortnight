@@ -1,0 +1,10 @@
+version:  "3"
+services: 
+  psychic-fortnight-app:
+    build: .
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment: 
+      - NODE_ENV=dev
+    command: npm run dev

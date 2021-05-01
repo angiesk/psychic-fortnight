@@ -1,0 +1,6 @@
+version:  "3"
+services: 
+  psychic-fortnight-app:
+    environment: 
+    - NODE_ENV=prod
+    command: node index.js

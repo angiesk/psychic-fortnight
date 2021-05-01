@@ -10,5 +10,5 @@ ENV PORT 3000
 EXPOSE $PORT
 #change below after adding nodemon to CMD ["npm", "run","dev"]
 #CMD ["node", "index.js"]
-CMD ["npm", "run","dev"]
+CMD ["node", "index.js"]
 
