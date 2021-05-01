@@ -57,7 +57,9 @@ docker run -v ${pwd}:/app -v /app/node_modules --env-file ./.env -p 3000:4000 -d
 ### removes voulme asscoiated with container
 `docker rm node-app -fv`
 
-`docker-compose up --build``docker-compose build`
+`docker-compose up --build`
+
+`docker-compose build`
 
 ` docker-compose up -d`
 
